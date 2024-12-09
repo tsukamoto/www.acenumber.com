@@ -1,0 +1,20 @@
+# vscode設定フォルダ
+.vscode/
+
+# macOS特有のファイル
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# macOSのリソースフォーク保存ファイル
+._*
+
+# アイコンファイル（USBドライブやネットワーク共有に作成）
+.Spotlight-V100
+.Trashes
+.VolumeIcon.icns
+
+# ゴミ箱関連
+.DS_Store?
+._*
+.fseventsd
