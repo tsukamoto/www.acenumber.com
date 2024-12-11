@@ -1,6 +1,9 @@
 # vscode設定フォルダ
 .vscode/
 
+# SASSフォルダ
+sass/
+
 # macOS特有のファイル
 .DS_Store
 .AppleDouble
