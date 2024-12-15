@@ -1,3 +1,5 @@
+@charset "UTF-8";
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css");
 * {
   padding: 0;
   margin: 0;
@@ -80,11 +82,75 @@ main h2 {
   color: #537845;
   font-size: 150%;
   text-align: center;
+  padding-bottom: 24px;
 }
-main iframe {
+main h3 {
+  color: #537845;
+  font-size: 125%;
+  padding-bottom: 12px;
+}
+main.contact iframe {
   display: block;
   width: 700px;
   margin: 0 auto;
+}
+main.privacy {
+  max-width: 768px;
+}
+main.privacy h2 + p {
+  padding-bottom: 40px;
+}
+main.privacy h3:nth-last-of-type(2) + p {
+  margin-bottom: 60px;
+}
+main.privacy h3:last-of-type + p {
+  margin-bottom: 20px;
+}
+main.privacy > ul {
+  margin-bottom: 60px;
+}
+main.privacy > ul > li {
+  position: relative;
+  padding-left: 1.2em;
+  padding-bottom: 0.8em;
+}
+main.privacy > ul > li > span {
+  display: block;
+  padding-bottom: 0.3em;
+}
+main.privacy > ul > li::before {
+  content: "\f02d"; /* FontAwesomeの本アイコンのunicode */
+  font-family: "Font Awesome 6 Free";
+  position: absolute;
+  left: 0;
+  top: 0.2em;
+}
+main.privacy > ul > li > ul li {
+  position: relative;
+  padding-left: 1.4em;
+}
+main.privacy > ul > li > ul li::before {
+  font-family: "Font Awesome 6 Free";
+  content: "\f518";
+  position: absolute;
+  left: 0;
+  top: 0.2em;
+}
+main.privacy > ul:last-of-type > li {
+  position: relative;
+  padding-left: 1.2em;
+  padding-bottom: 0.2em;
+}
+main.privacy > ul:last-of-type > li::before {
+  content: "\f073";
+  font-family: "Font Awesome 6 Free";
+  position: absolute;
+  left: 0;
+  top: 0.1em;
+}
+main.privacy ol {
+  padding-left: 2em;
+  margin-bottom: 60px;
 }
 
 footer {
