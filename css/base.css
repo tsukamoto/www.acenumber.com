@@ -152,6 +152,22 @@ main.privacy ol {
   padding-left: 2em;
   margin-bottom: 60px;
 }
+main.profile {
+  width: 768px;
+}
+main.profile dl {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+main.profile dl dt {
+  width: 6em;
+  font-weight: 700;
+}
+main.profile dl dd {
+  width: calc(100% - 6em);
+  padding-bottom: 1em;
+}
 
 footer {
   width: 100%;
