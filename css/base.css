@@ -26,7 +26,7 @@ body {
   background-color: #FBFFEE;
   font-size: 16px;
   color: #333;
-  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", "Helvetica Neue", HelveticaNeue, YuGothic, Verdana, Meiryo, sans-serif;
 }
 
 a {
@@ -80,14 +80,464 @@ main {
 }
 main h2 {
   color: #537845;
-  font-size: 150%;
+  font-size: 160%;
   text-align: center;
   padding-bottom: 24px;
 }
 main h3 {
   color: #537845;
-  font-size: 125%;
+  font-size: 135%;
   padding-bottom: 12px;
+}
+main.top #tabs {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-bottom: 80px;
+}
+main.top #tabs .tab-btn {
+  display: none; /*タブの切り替えを制御するラジオボタンを非表示に*/
+}
+main.top #tabs #tab-menu {
+  width: 360px;
+}
+main.top #tabs #tab-menu li {
+  font-size: 115%;
+  color: #6285a8;
+  border-top: 1px solid #2c3e50;
+  background-color: #34495e;
+  transition: color 300ms ease, bakground-color 300ms ease;
+}
+main.top #tabs #tab-menu li label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 1.4em;
+}
+main.top #tabs #tab-menu li label h4 {
+  color: white;
+  font-size: 120%;
+  transition: color 300ms ease;
+}
+main.top #tabs #tab-menu li label i:last-child {
+  color: #2c3e50;
+  transition: color 300ms ease;
+}
+main.top #tabs #tab-menu li:first-child {
+  border-top: none;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+main.top #tabs #tab-menu li:last-child {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+main.top #tabs .tab-list {
+  display: block;
+  padding: 16px 0;
+  text-align: center;
+  cursor: pointer; /*オンマウス時にカーソルを指の形に*/
+}
+main.top #tabs #tab-btn1:checked ~ #tab-menu #tab-list1,
+main.top #tabs #tab-btn2:checked ~ #tab-menu #tab-list2,
+main.top #tabs #tab-btn3:checked ~ #tab-menu #tab-list3,
+main.top #tabs #tab-btn4:checked ~ #tab-menu #tab-list4 {
+  background-color: #2c3e50; /*対応するボタンにチェックが入ったときに背景を着色*/
+  color: #1abc9c;
+  transition: color 300ms ease, bakground-color 300ms ease;
+}
+main.top #tabs #tab-btn1:checked ~ #tab-menu #tab-list1 h4,
+main.top #tabs #tab-btn2:checked ~ #tab-menu #tab-list2 h4,
+main.top #tabs #tab-btn3:checked ~ #tab-menu #tab-list3 h4,
+main.top #tabs #tab-btn4:checked ~ #tab-menu #tab-list4 h4 {
+  color: #1abc9c;
+  transition: color 300ms ease;
+}
+main.top #tabs #tab-btn1:checked ~ #tab-menu #tab-list1 i:last-child,
+main.top #tabs #tab-btn2:checked ~ #tab-menu #tab-list2 i:last-child,
+main.top #tabs #tab-btn3:checked ~ #tab-menu #tab-list3 i:last-child,
+main.top #tabs #tab-btn4:checked ~ #tab-menu #tab-list4 i:last-child {
+  color: #1abc9c;
+  transition: color 300ms ease;
+}
+main.top #tabs #tab-btn1:checked ~ #tab-menu #tab-list1 {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+main.top #tabs #tab-btn4:checked ~ #tab-menu #tab-list4 {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+main.top #tabs .tab-content {
+  width: 68%;
+  display: none; /*初期状態を非表示に*/
+}
+main.top #tabs .tab-content h3 {
+  color: white;
+  font-family: 游明朝, "Yu Mincho", YuMincho, "Hiragino Mincho ProN", "Hiragino Mincho Pro", HGS明朝E, メイリオ, Meiryo, serif;
+  font-size: 150%;
+  text-align: center;
+  line-height: 2.4;
+  padding: 12px 0;
+  border-bottom: 1px solid #cdcdcd;
+}
+main.top #tabs .tab-content ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+main.top #tabs .tab-content ul li {
+  width: 33.3333333333%;
+  aspect-ratio: 380/580;
+  border-bottom: 1px solid #cdcdcd;
+}
+main.top #tabs .tab-content ul li:nth-child(3n-1), main.top #tabs .tab-content ul li:nth-child(3n) {
+  border-left: 1px solid #cdcdcd;
+}
+main.top #tabs .tab-content ul li.no-item {
+  background: linear-gradient(to bottom, #e5e2e2, #faf9f9);
+  position: relative;
+}
+main.top #tabs .tab-content ul li.no-item::before {
+  content: "";
+  width: 30%;
+  aspect-ratio: 24/6;
+  position: absolute;
+  top: 50%;
+  left: 35%;
+  background: url(https://gigaplus.makeshop.jp/Drestra/images/home/category/no-item-logo.png) no-repeat center center;
+  background-size: contain;
+}
+main.top #tabs .tab-content ul li a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  color: #333;
+  position: relative;
+  background-color: white;
+  border: 1px solid white;
+  transition: background-color 300ms ease, border-color 300ms ease;
+}
+main.top #tabs .tab-content ul li a .abs {
+  position: absolute;
+  z-index: 1;
+}
+main.top #tabs .tab-content ul li a .abs.blue-circle {
+  left: 5%;
+  top: 5%;
+  width: 5em;
+  height: 5em;
+  border-radius: 50%;
+  background-color: white;
+  color: white;
+  font-weight: 700;
+  font-size: 125%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+main.top #tabs .tab-content ul li a .abs.blue-circle span {
+  display: block;
+  text-align: center;
+}
+main.top #tabs .tab-content ul li a .abs.gray-circle, main.top #tabs .tab-content ul li a .abs.olive-circle {
+  right: 15%;
+  top: 60%;
+  width: 4em;
+  height: 4em;
+  border-radius: 50%;
+  background-color: #999;
+  color: white;
+  font-weight: 700;
+  font-size: 115%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+main.top #tabs .tab-content ul li a .abs.gray-circle span, main.top #tabs .tab-content ul li a .abs.olive-circle span {
+  display: block;
+  text-align: center;
+}
+main.top #tabs .tab-content ul li a .abs.olive-circle {
+  background-color: #d0c36f;
+  top: 40%;
+}
+main.top #tabs .tab-content ul li a .new {
+  width: 100%;
+  min-height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main.top #tabs .tab-content ul li a .new span {
+  display: inline-block;
+  color: white;
+  font-size: 85%;
+  font-weight: 700;
+  background-color: white;
+  text-align: center;
+  line-height: 2em;
+  padding: 0 1.5em;
+  border-radius: 1em;
+}
+main.top #tabs .tab-content ul li a .new + .exp {
+  padding-top: 0;
+}
+main.top #tabs .tab-content ul li a .exp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 20px;
+}
+main.top #tabs .tab-content ul li a .exp span {
+  font-size: 85%;
+  text-align: center;
+  display: inline-block;
+  background-color: #e6ebf7;
+  font-family: 游明朝, "Yu Mincho", YuMincho, "Hiragino Mincho ProN", "Hiragino Mincho Pro", HGS明朝E, メイリオ, Meiryo, serif;
+  margin: 0 auto 2px auto;
+  padding: 0 0.5em;
+}
+main.top #tabs .tab-content ul li a .exp.line1 span {
+  margin: 0.95em auto;
+}
+main.top #tabs .tab-content ul li a .img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  position: relative;
+}
+main.top #tabs .tab-content ul li a .img img {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-size: 75% 75%;
+  background-position: center center;
+  transition: width 0.3s ease, height 0.3s ease;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+main.top #tabs .tab-content ul li a:hover {
+  background-color: #fafbff;
+  border-color: #073aac;
+  transition: background-color 300ms ease, border-color 300ms ease;
+}
+main.top #tabs .tab-content ul li a:hover .img img {
+  width: 110%;
+  height: 110%;
+  transition: width 0.3s ease, height 0.3s ease;
+}
+main.top #tabs .tab-content ul li a h4 {
+  flex-grow: 1;
+  padding: 1rem 1.6rem;
+  text-align: center;
+  font-family: 游明朝, "Yu Mincho", YuMincho, "Hiragino Mincho ProN", "Hiragino Mincho Pro", HGS明朝E, メイリオ, Meiryo, serif;
+}
+main.top #tabs .tab-content ul li a h4 span {
+  display: block;
+}
+main.top #tabs .tab-content ul li a h4 span.s {
+  font-size: 80%;
+}
+main.top #tabs .tab-content ul li a .price {
+  padding: 0.5em 0;
+  text-align: center;
+}
+main.top #tabs .tab-content ul li a .price span.yen {
+  font-size: 115%;
+}
+main.top #tabs .tab-content ul li a .price span.tax {
+  font-size: 85%;
+}
+main.top #tabs .tab-content ul li a span.status-soldout {
+  bottom: initial;
+  top: 0;
+}
+main.top #tabs .tab-content > a:last-child {
+  margin: 3rem auto 0 auto;
+}
+main.top #tabs .tab-content#tab-content1 ul li a .img img {
+  background: url(https://gigaplus.makeshop.jp/Drestra/images/home/category/fem01.png) no-repeat center center;
+  background-size: 75% 75%;
+}
+main.top #tabs .tab-content#tab-content1 ul li:nth-child(2) a .exp {
+  padding-top: 60px;
+}
+main.top #tabs .tab-content#tab-content1 ul li:nth-child(2) a .img img {
+  background: url(https://gigaplus.makeshop.jp/Drestra/images/home/category/fem02.png) no-repeat center center;
+  background-size: 75% 75%;
+}
+main.top #tabs .tab-content#tab-content1 ul li:nth-child(3) a .exp {
+  padding-top: 60px;
+}
+main.top #tabs .tab-content#tab-content1 ul li:nth-child(3) a .img img {
+  background: url(https://gigaplus.makeshop.jp/Drestra/images/home/category/fem03.png) no-repeat center center;
+  background-size: 75% 75%;
+}
+main.top #tabs .tab-content#tab-content1 ul li:nth-child(4) a .img img {
+  background: url(https://gigaplus.makeshop.jp/Drestra/images/home/category/fem04.png) no-repeat center center;
+  background-size: 75% 75%;
+}
+main.top #tabs .tab-content#tab-content1 ul li:nth-child(5) a .img img {
+  background: url(https://gigaplus.makeshop.jp/Drestra/images/home/category/fem05.png) no-repeat center center;
+  background-size: 75% 75%;
+}
+main.top #tabs .tab-content#tab-content1 ul li:nth-child(6) a .exp {
+  padding-top: 20px;
+}
+main.top #tabs .tab-content#tab-content1 ul li:nth-child(6) a .img img {
+  background: url(https://gigaplus.makeshop.jp/Drestra/images/home/category/fem06.png) no-repeat center center;
+  background-size: 75% 75%;
+}
+main.top #tabs .tab-content#tab-content1 ul li:nth-child(7) a {
+  pointer-events: none;
+}
+main.top #tabs .tab-content#tab-content1 ul li:nth-child(7) a .img img {
+  background: url(https://gigaplus.makeshop.jp/Drestra/images/home/category/fem07.png) no-repeat center center;
+  background-size: 75% 75%;
+}
+main.top #tabs .tab-content#tab-content1 ul li:nth-child(8) a {
+  pointer-events: none;
+}
+main.top #tabs .tab-content#tab-content1 ul li:nth-child(8) a .img img {
+  background: url(https://gigaplus.makeshop.jp/Drestra/images/home/category/fem08.png) no-repeat center center;
+  background-size: 75% 75%;
+}
+main.top #tabs .tab-content#tab-content1 ul li:nth-child(9) a {
+  pointer-events: none;
+}
+main.top #tabs .tab-content#tab-content1 ul li:nth-child(9) a .img img {
+  background: url(https://gigaplus.makeshop.jp/Drestra/images/home/category/fem09.png) no-repeat center center;
+  background-size: 75% 75%;
+}
+main.top #tabs .tab-content#tab-content1 ul li:nth-last-child(2), main.top #tabs .tab-content#tab-content1 ul li:last-child {
+  display: none;
+}
+main.top #tabs .tab-content#tab-content2 ul li a .img img {
+  background: url(https://gigaplus.makeshop.jp/Drestra/images/home/category/ed01.png) no-repeat center center;
+  background-size: 75% 75%;
+}
+main.top #tabs .tab-content#tab-content2 ul li:nth-child(2) a .img img {
+  background: url(https://gigaplus.makeshop.jp/Drestra/images/home/category/ed02.png) no-repeat center center;
+  background-size: 75% 75%;
+}
+main.top #tabs .tab-content#tab-content2 ul li:nth-child(3) a .img img {
+  background: url(https://gigaplus.makeshop.jp/Drestra/images/home/category/ed03.png) no-repeat center center;
+  background-size: 75% 75%;
+}
+main.top #tabs .tab-content#tab-content2 ul li:nth-child(4) a .img img {
+  background: url(https://gigaplus.makeshop.jp/Drestra/images/home/category/ed04.png) no-repeat center center;
+  background-size: 75% 75%;
+}
+main.top #tabs .tab-content#tab-content2 ul li:nth-child(5) a .img img {
+  background: url(https://gigaplus.makeshop.jp/Drestra/images/home/category/ed05.png) no-repeat center center;
+  background-size: 75% 75%;
+}
+main.top #tabs .tab-content#tab-content2 ul li:nth-child(6) a .img img {
+  background: url(https://gigaplus.makeshop.jp/Drestra/images/home/category/ed06.png) no-repeat center center;
+  background-size: 75% 75%;
+}
+main.top #tabs .tab-content#tab-content2 ul li:nth-last-child(2), main.top #tabs .tab-content#tab-content2 ul li:last-child {
+  display: none;
+}
+main.top #tabs .tab-content#tab-content3 ul li a .img img {
+  background: url(https://gigaplus.makeshop.jp/Drestra/images/home/category/fem02.png) no-repeat center center;
+  background-size: 75% 75%;
+}
+main.top #tabs .tab-content#tab-content3 ul li:nth-child(2) a .img img {
+  background: url(https://gigaplus.makeshop.jp/Drestra/images/home/category/fem04.png) no-repeat center center;
+  background-size: 75% 75%;
+}
+main.top #tabs .tab-content#tab-content3 ul li:nth-child(3) a .img img {
+  background: url(https://gigaplus.makeshop.jp/Drestra/images/home/category/fem05.png) no-repeat center center;
+  background-size: 75% 75%;
+}
+main.top #tabs .tab-content#tab-content3 ul li:nth-child(4) a .img img {
+  background: url(https://gigaplus.makeshop.jp/Drestra/images/home/category/fem06.png) no-repeat center center;
+  background-size: 75% 75%;
+}
+main.top #tabs .tab-content#tab-content3 ul li:nth-child(5) a .img img {
+  background: url(https://gigaplus.makeshop.jp/Drestra/images/home/category/fem01.png) no-repeat center center;
+  background-size: 75% 75%;
+}
+main.top #tabs .tab-content#tab-content3 ul li:last-child {
+  display: none;
+}
+main.top #tabs .tab-content#tab-content4 ul li {
+  aspect-ratio: 380/520;
+}
+main.top #tabs .tab-content#tab-content4 ul li a .img img {
+  background: url(https://gigaplus.makeshop.jp/Drestra/images/home/category/bulk01.png) no-repeat center center;
+  background-size: 75% 75%;
+}
+main.top #tabs .tab-content#tab-content4 ul li:nth-child(2) a .img img {
+  background: url(https://gigaplus.makeshop.jp/Drestra/images/home/category/bulk02.png) no-repeat center center;
+  background-size: 75% 75%;
+}
+main.top #tabs .tab-content#tab-content4 ul li:nth-child(3) a .img img {
+  background: url(https://gigaplus.makeshop.jp/Drestra/images/home/category/bulk03.png) no-repeat center center;
+  background-size: 75% 75%;
+}
+main.top #tabs .tab-content#tab-content4 ul li:nth-child(4) a .img img {
+  background: url(https://gigaplus.makeshop.jp/Drestra/images/home/category/bulk04.png) no-repeat center center;
+  background-size: 75% 75%;
+}
+main.top #tabs .tab-content#tab-content4 ul li:nth-child(5) a .img img {
+  background: url(https://gigaplus.makeshop.jp/Drestra/images/home/category/bulk05.png) no-repeat center center;
+  background-size: 75% 75%;
+}
+main.top #tabs .tab-content#tab-content4 ul li:nth-child(6) a .img img {
+  background: url(https://gigaplus.makeshop.jp/Drestra/images/home/category/bulk06.png) no-repeat center center;
+  background-size: 75% 75%;
+}
+main.top #tabs .tab-content#tab-content4 ul li:nth-child(7) a .img img {
+  background: url(https://gigaplus.makeshop.jp/Drestra/images/home/category/bulk07.png) no-repeat center center;
+  background-size: 75% 75%;
+}
+main.top #tabs .tab-content#tab-content4 ul li:nth-child(8) a .img img {
+  background: url(https://gigaplus.makeshop.jp/Drestra/images/home/category/bulk08.png) no-repeat center center;
+  background-size: 75% 75%;
+}
+main.top #tabs .tab-content#tab-content4 ul li:nth-child(9) a .img img {
+  background: url(https://gigaplus.makeshop.jp/Drestra/images/home/category/bulk09.png) no-repeat center center;
+  background-size: 75% 75%;
+}
+main.top #tabs .tab-content#tab-content4 ul li:nth-child(10) a .img img {
+  background: url(https://gigaplus.makeshop.jp/Drestra/images/home/category/bulk10.png) no-repeat center center;
+  background-size: 75% 75%;
+}
+main.top #tabs .tab-content#tab-content4 ul li:nth-child(11) a .img img {
+  background: url(https://gigaplus.makeshop.jp/Drestra/images/home/category/bulk11.png) no-repeat center center;
+  background-size: 75% 75%;
+}
+main.top #tabs .tab-content#tab-content4 ul li:nth-child(12) a .img img {
+  background: url(https://gigaplus.makeshop.jp/Drestra/images/home/category/bulk12.png) no-repeat center center;
+  background-size: 75% 75%;
+}
+main.top #tabs #tab-btn1:checked ~ #tab-contents #tab-content1,
+main.top #tabs #tab-btn2:checked ~ #tab-contents #tab-content2,
+main.top #tabs #tab-btn3:checked ~ #tab-contents #tab-content3,
+main.top #tabs #tab-btn4:checked ~ #tab-contents #tab-content4 {
+  display: block; /*対応するボタンにチェックが入ったときに表示*/
+}
+main.top #movies {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  -moz-column-gap: 1%;
+       column-gap: 1%;
+}
+main.top #movies iframa {
+  max-width: 30%;
+  aspect-ratio: 300/169;
 }
 main.contact iframe {
   display: block;

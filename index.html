@@ -31,9 +31,91 @@
 	</ul>
 </header>
 
-<main>
-	<p>Ver.3</p>
-	<p>Contents</p>
+<main class="top">
+	<h2>Contents</h2>
+	<h3>
+		<i class="fa-solid fa-bell"></i>
+		<span>Topics</span>
+	</h3>
+	<div id="tabs">
+		<input id="tab-btn1" class="tab-btn" name="tab" type="radio" checked>
+		<input id="tab-btn2" class="tab-btn" name="tab" type="radio">
+		<input id="tab-btn3" class="tab-btn" name="tab" type="radio">
+		<input id="tab-btn4" class="tab-btn" name="tab" type="radio">
+		<ul id="tab-menu">
+			<li>
+				<label id="tab-list1" class="tab-list" for="tab-btn1">
+					<i class="fa-solid fa-clock"></i>
+					<div>
+						<h4>うさ犬時計</h4>
+						<span>3D Movie</span>
+					</div>
+					<i class="fa-solid fa-check"></i>
+				</label>
+			</li>
+			<li>
+				<label id="tab-list2" class="tab-list" for="tab-btn2">
+					<i class="fa-solid fa-dice"></i>
+					<div>
+						<h4>うさ犬サイコロ</h4>
+						<span>Usainu Dice</span>
+					</div>
+					<i class="fa-solid fa-check"></i>
+				</label>
+			</li>
+			<li>
+				<label id="tab-list3" class="tab-list" for="tab-btn3">
+					<i class="fa-solid fa-camera-retro"></i>
+					<div>
+						<h4>うさ犬ソーダ缶</h4>
+						<span>3D Modeling &amp; Photo</span>
+					</div>
+					<i class="fa-solid fa-check"></i>
+				</label>
+			</li>
+			<li>
+				<label id="tab-list4" class="tab-list" for="tab-btn4">
+					<i class="fa-brands fa-windows"></i>
+					<div>
+						<h4>ゲーム＆ツール</h4>
+						<span>Windows Software</span>
+					</div>
+					<i class="fa-solid fa-check"></i>
+				</label>
+			</li>
+		</ul>
+		<div id="tab-contents">
+			<div id="tab-content1" class="tab-content">
+				<video class="video-js" controls
+				preload="auto" width="620" height="349" poster="movie/usainu_clock.jpg" data-setup="{}">
+				<source src="movie/usainu_clock.webm" type="video/webm">
+				<source src="movie/usainu_clock.mp4" type="video/mp4">
+				</video>
+			</div><!-- /video -->
+			<div id="tab-content2" class="tab-content">
+				<video class="video-js" controls
+				preload="auto" width="620" height="349" poster="movie/usainu_dice.jpg" data-setup="{}">
+				<source src="movie/usainu_dice.webm" type="video/webm">
+				<source src="movie/usainu_dice.mp4" type="video/mp4">
+				</video>
+			</div><!-- /video -->
+			<div id="tab-content3" class="tab-content">
+				<img width="620" height="396" src="images/usainu_soda_can1.jpg" />
+			</div>
+			<div id="tab-content4" class="tab-content">
+				<img width="620" height="396" src="images/windows_software.jpg" />
+			</div>
+		</div>
+	</div>
+	<h3>
+		<i class="fa-solid fa-film"></i>
+		<span>3D Movies</span>
+	</h3>
+	<div id="movies">
+		<iframe width="380" height="200" src="http://www.youtube.com/embed/iO0U7qaq1xk" frameborder="0" allowfullscreen></iframe>
+		<iframe width="380" height="200" src="http://www.youtube.com/embed/wBVBN_sq83M" frameborder="0" allowfullscreen></iframe>
+		<iframe width="380" height="200" src="http://www.youtube.com/embed/7f60V7LAqv4" frameborder="0" allowfullscreen></iframe>
+	</div>
 </main>
 
 <footer>
