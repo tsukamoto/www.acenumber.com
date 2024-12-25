@@ -25,12 +25,12 @@ html {
 body {
   background-color: #FBFFEE;
   font-size: 16px;
-  color: #333;
+  color: #555;
   font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", "Helvetica Neue", HelveticaNeue, YuGothic, Verdana, Meiryo, sans-serif;
 }
 
 a {
-  color: #333;
+  color: #555;
   transition: color 300ms ease;
 }
 a:hover {
@@ -532,12 +532,158 @@ main.top #movies {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-bottom: 80px;
   -moz-column-gap: 1%;
        column-gap: 1%;
 }
 main.top #movies iframa {
   max-width: 30%;
   aspect-ratio: 300/169;
+}
+main.top #bonus {
+  display: flex;
+  justify-content: space-between;
+  -moz-column-gap: 1%;
+       column-gap: 1%;
+  align-items: flex-start;
+}
+main.top #bonus > div {
+  width: 49.5%;
+}
+main.top #bonus > div #games h3 {
+  color: lightcoral;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  -moz-column-gap: 0.5em;
+       column-gap: 0.5em;
+}
+main.top #bonus > div #games h3 i {
+  font-size: 150%;
+}
+main.top #bonus > div #games h3 > span > span {
+  display: block;
+}
+main.top #bonus > div #games h3 > span > span:first-child {
+  font-size: 70%;
+  padding-left: 1em;
+  padding-bottom: 0.3em;
+}
+main.top #bonus > div #games ul li a {
+  display: flex;
+  padding-bottom: 24px;
+  text-decoration: none;
+}
+main.top #bonus > div #games ul li a img {
+  border-radius: 10px;
+  margin-right: 12px;
+  margin-top: 12px;
+}
+main.top #bonus > div #games ul li a .detail h4 {
+  color: lightcoral;
+  font-size: 115%;
+  padding-bottom: 0.6em;
+}
+main.top #bonus > div #games ul li a .detail ul.desc li {
+  position: relative;
+  padding-left: 1em;
+  padding-bottom: 0.3em;
+}
+main.top #bonus > div #games ul li a .detail ul.desc li::before {
+  content: "\f5a1";
+  font-family: "Font Awesome 6 Free";
+  font-size: 60%;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0.5em;
+  color: lightcoral;
+}
+main.top #bonus > div #hamamatsu-heritage h3,
+main.top #bonus > div #scholarly-essays h3 {
+  color: #34495e;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  -moz-column-gap: 0.5em;
+       column-gap: 0.5em;
+}
+main.top #bonus > div #hamamatsu-heritage h3 i,
+main.top #bonus > div #scholarly-essays h3 i {
+  font-size: 150%;
+}
+main.top #bonus > div #hamamatsu-heritage h3 > span > span,
+main.top #bonus > div #scholarly-essays h3 > span > span {
+  display: block;
+}
+main.top #bonus > div #hamamatsu-heritage h3 > span > span:first-child,
+main.top #bonus > div #scholarly-essays h3 > span > span:first-child {
+  font-size: 70%;
+  padding-bottom: 0.3em;
+}
+main.top #bonus > div #hamamatsu-heritage h3 > span > span:last-child,
+main.top #bonus > div #scholarly-essays h3 > span > span:last-child {
+  padding-left: 1em;
+}
+main.top #bonus > div #hamamatsu-heritage ul,
+main.top #bonus > div #scholarly-essays ul {
+  margin-left: 1em;
+  margin-bottom: 40px;
+}
+main.top #bonus > div #hamamatsu-heritage ul li,
+main.top #bonus > div #scholarly-essays ul li {
+  margin-bottom: 1em;
+  padding-left: 1.4em;
+  position: relative;
+}
+main.top #bonus > div #hamamatsu-heritage ul li::before,
+main.top #bonus > div #scholarly-essays ul li::before {
+  content: "\f5a0";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-family: "Font Awesome 6 Free";
+  color: #34495e;
+}
+main.top #bonus > div #hamamatsu-heritage ul li span,
+main.top #bonus > div #scholarly-essays ul li span {
+  font-size: 85%;
+  color: #888;
+}
+main.top #bonus > div #scholarly-essays h3 {
+  color: #1abc9c;
+}
+main.top #bonus > div #scholarly-essays ul li::before {
+  content: "\f19d";
+  color: #1abc9c;
+}
+main.top #bonus > div #sns h3 {
+  color: cadetblue;
+}
+main.top #bonus > div #sns ul {
+  margin-left: 1.5em;
+}
+main.top #bonus > div #sns ul li {
+  margin-bottom: 0.5em;
+}
+main.top #bonus > div #sns ul li a {
+  display: block;
+  width: 18em;
+  color: white;
+  padding: 1em 0 1em 1em;
+  background-color: cadetblue;
+  transition: background-color 300ms ease;
+  border-radius: 12px;
+  text-decoration: none;
+}
+main.top #bonus > div #sns ul li a i {
+  margin-right: 0.5em;
+  font-size: 125%;
+}
+main.top #bonus > div #sns ul li a:hover {
+  background-color: #3C938E;
+  transition: background-color 300ms ease;
 }
 main.contact iframe {
   display: block;
