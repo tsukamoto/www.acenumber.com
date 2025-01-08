@@ -121,6 +121,7 @@ main.privacy > ul > li > span {
 main.privacy > ul > li::before {
   content: "\f02d"; /* FontAwesomeの本アイコンのunicode */
   font-family: "Font Awesome 6 Free";
+  font-weight: 700;
   position: absolute;
   left: 0;
   top: 0.2em;
@@ -132,6 +133,7 @@ main.privacy > ul > li > ul li {
 main.privacy > ul > li > ul li::before {
   font-family: "Font Awesome 6 Free";
   content: "\f518";
+  font-weight: 700;
   position: absolute;
   left: 0;
   top: 0.2em;
